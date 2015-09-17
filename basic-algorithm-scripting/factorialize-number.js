@@ -1,10 +1,9 @@
 function factorialize(num) {
-  if (num > 1) {
-    return num * factorialize(num-1);
-  }
-  else {
-    return 1;
-  }
+
+  if (num > 1) return num * factorialize(num-1);
+  
+  return 1;
+
 }
 
 factorialize(5);
@@ -29,7 +28,7 @@ Remember to use Read-Search-Ask if you get stuck. Write your own code.
 Here are some helpful links:
 
     Arithmetic Operators
-
+    https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators
 
 // ***********************************************
 function factorialize(num) {
