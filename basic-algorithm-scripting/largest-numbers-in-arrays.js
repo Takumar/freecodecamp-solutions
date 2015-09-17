@@ -1,7 +1,7 @@
 function largestOfFour(arr) {
-  var resultArr = [];
-  var max_value = 0;
-  var current_value = 0;
+  var resultArr = []; // here we put maximum values from each sub array
+  var max_value = 0; // value representing currently maximum found value
+  var current_value = 0; // we put here value from sub array to not check it every time in array
   // first we loop through sub arrays
   for (var ind_y = 0; ind_y < arr.length; ind_y++) {
     // we initialize variable max_value which represents maximum value in sub array
@@ -20,7 +20,6 @@ function largestOfFour(arr) {
 }
 
 largestOfFour([[4, 5, 1, 3], [13, 27, 18, 26], [32, 35, 37, 39], [1000, 1001, 857, 1]]);
-
 
 /*
 *** 	EXERCISE DESCRIPTION	***
