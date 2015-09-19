@@ -1,10 +1,12 @@
 function end(str, target) {
   // "Never give up and good luck will find you."
   // -- Falcor
-    if (str.substr(-target.length, target.length) === target) {
-      return true;
-    };
-  return false;
+  if (str.substr(-target.length,target.length) === target) {
+    return true;
+  }
+  else {
+    return false;
+  }
 }
 
 end('Bastian', 'n');
@@ -15,6 +17,7 @@ Bonfire: Confirm the Ending
 Difficulty: 
 
 Check if a string (first argument) ends with the given target string (second argument).
+
 Remember to use Read-Search-Ask if you get stuck. Write your own code.
 
 Here are some helpful links:
