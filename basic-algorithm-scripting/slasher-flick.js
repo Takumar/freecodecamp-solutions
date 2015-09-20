@@ -1,7 +1,6 @@
 function slasher(arr, howMany) {
-//    if (arr.length >= howMany) {
-      arr.splice(0, howMany);
-//    }
+  // it doesn't always pay to be first
+  arr.splice(0, howMany);
   return arr;
 }
 
