@@ -9,6 +9,7 @@ function find(arr, func) {
   }
   
   return undefined;
+  
 }
 
 /*
@@ -45,6 +46,5 @@ Here are some helpful links:
 	https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/some
 
 // ***********************************************
-
 // ***********************************************
 */

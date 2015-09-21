@@ -18,10 +18,7 @@ function drop(arr, func) {
   return shifted;
 }
 
-
-
 drop([1, 2, 3], function(n) {return n < 3; });
-
 
 /*
 *** 	EXERCISE DESCRIPTION	***
