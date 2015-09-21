@@ -1,7 +1,21 @@
+// I wrote this version because I cannot find sense in using Array.some() function
+// it is used in commented function below
 function find(arr, func) {
 
-  var num = arr.some(func);
-  if (num === false) {
+  for(var i=0; i<=arr.length; i++) {
+    if (func(arr[i]) === true) {
+      return arr[i];
+    }
+  }
+  
+  return undefined;
+}
+
+/*
+// function which utilizes Array.some() function
+function find(arr, func) {
+   
+  if (!arr.some(func)) {
       return undefined;
   }
 
@@ -12,6 +26,7 @@ function find(arr, func) {
   }
 
 }
+*/
 
 find([1, 4, 3, 3], function(num){ return num % 2 === 0; });
 
