@@ -1,15 +1,14 @@
+function getPair(gen) {
+  switch (gen) {
+    case 'G': return 'C';
+    case 'C': return 'G';
+    case 'A': return 'T';
+    case 'T': return 'A';
+  }
+}
+
 function pair(str) {
   var DNAStrand = [];
-
-  function getPair(gen) {
-    switch (gen) {
-      case 'G': return 'C';
-      case 'C': return 'G';
-      case 'A': return 'T';
-      case 'T': return 'A';
-    }
-
-  }
 
   str = str.split('');
   DNAStrand = str.map(function(val) {
@@ -20,6 +19,7 @@ function pair(str) {
 }
 
 pair("GCG");
+
 
 /*
 *** 	EXERCISE DESCRIPTION	***
