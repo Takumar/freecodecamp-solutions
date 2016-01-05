@@ -1,16 +1,12 @@
 function translate(str) {
-  var regexp = /[aeiou]/;
-  var vowelIdx = str.search(regexp);
+  var vowelIdx = str.search(/[aeiou]/);
 
-  if (vowelIdx <= 0) {
-    return str + "way";
-  }
-  else {
-    return str.substr(vowelIdx) + str.substr(0, vowelIdx) + "ay";
-  }
+  if (vowelIdx <= 0) return str + "way";
+  else return str.substr(vowelIdx) + str.substr(0, vowelIdx) + "ay";
 }
 
 translate("consonant");
+
 translate("paragraphs"); //should return "aragraphspay".translate("paragraphs")
 translate("glove"); //should return "oveglay".
 translate("algorithm"); //should return "algorithmway".
