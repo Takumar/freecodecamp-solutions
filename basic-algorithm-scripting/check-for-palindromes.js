@@ -1,12 +1,9 @@
 function palindrome(str) {
-  
-  str = str.toLowerCase().replace(/[^a-zA-Z0-9]/g, "");
-  rstr = str.split("").reverse().join("");
-  
-  if (str === rstr) {
-    return true;
-  }
-  return false;
+
+  str = str.toLowerCase().replace(/[^a-z0-9]/g, "");  // remove everything that is not letter or digit
+  var rstr = str.split("").reverse().join("");
+
+  return str === rstr;
 }
 
 palindrome("eye");
@@ -32,7 +29,7 @@ Here are some helpful links:
 
     String.toLowerCase()
 	https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/toLowerCase
-	
+
 // ***********************************************
 function palindrome(str) {
   return true;
