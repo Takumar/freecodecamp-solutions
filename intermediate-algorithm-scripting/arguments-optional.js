@@ -1,9 +1,19 @@
 function add() {
-  return false;
+  // calling function with one argument
+  if (arguments.length===1) {
+    var value = arguments[0];
+    return function(arg) {
+      return value + arg;
+    };
+  }
+  // calling function with two arguments (more are omited)
+  else {
+    return arguments[0] + arguments[1];
+  }
+
 }
-
-add(2,3);
-
+add(2,3); // should return 5
+add(2)(3); // should return 5
 /*
 *** 	EXERCISE DESCRIPTION	***
 Bonfire: Arguments Optional
