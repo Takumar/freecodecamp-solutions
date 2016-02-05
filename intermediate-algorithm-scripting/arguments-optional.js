@@ -1,19 +1,42 @@
 function add() {
+  var val1 = 0,
+      val2 = 0;
+  var argsCount = arguments.length;
+
   // calling function with one argument
-  if (arguments.length===1) {
-    var value = arguments[0];
-    return function(arg) {
-      return value + arg;
-    };
+  if (argsCount===1) {
+    val1 = arguments[0];
+    if (isNaN(val1)) {
+      return undefined;
+    }
+    else {
+      return function(arg){
+        if (!isNaN(arg)) {
+          return val1 + arg;
+        }
+      }
+    }
   }
   // calling function with two arguments (more are omited)
-  else {
-    return arguments[0] + arguments[1];
+  else if (argsCount >= 2) {
+    val1 = arguments[0],
+    val2 = arguments[1];
+    if (isNaN(val1) || isNaN(val2)) {
+      return undefined;
+    }
+    else {
+      return val1 + val2;
+    }
   }
 
 }
-add(2,3); // should return 5
-add(2)(3); // should return 5
+console.log(
+add("http://bit.ly/IqT6zt"));
+
+var sumTwoAnd = add(2);
+console.log(sumTwoAnd(3));
+//add(2,3); // should return 5
+//add(2)(3); // should return 5
 /*
 *** 	EXERCISE DESCRIPTION	***
 Bonfire: Arguments Optional
