@@ -2,41 +2,44 @@ function add() {
   var val1 = 0,
       val2 = 0;
   var argsCount = arguments.length;
-
-  // calling function with one argument
-  if (argsCount===1) {
-    val1 = arguments[0];
-    if (isNaN(val1)) {
-      return undefined;
+  // isNaN is not working for me because "23" is treated as number
+  // Function isNum(arg) checks if arg is number
+  var isNum = function(arg) {
+    if (typeof arg === "number") {
+      return true;
     }
-    else {
+    return false;
+  };
+  // calling function with one argument
+  if (argsCount === 1) {
+    val1 = arguments[0];
+    if (isNum(val1)) {
       return function(arg){
-        if (!isNaN(arg)) {
+        if (isNum(arg)) {
           return val1 + arg;
         }
-      }
+      };
     }
   }
   // calling function with two arguments (more are omited)
-  else if (argsCount >= 2) {
-    val1 = arguments[0],
+  else if (argsCount > 1) {
+    val1 = arguments[0];
     val2 = arguments[1];
-    if (isNaN(val1) || isNaN(val2)) {
-      return undefined;
-    }
-    else {
+    if (isNum(val1) && isNum(val2)) {
       return val1 + val2;
     }
   }
 
+  return undefined;
 }
-console.log(
-add("http://bit.ly/IqT6zt"));
 
 var sumTwoAnd = add(2);
 console.log(sumTwoAnd(3));
 //add(2,3); // should return 5
 //add(2)(3); // should return 5
+//console.log(add("http://bit.ly/IqT6zt")); // should return undefined.
+//add(2, "3"); // should return undefined.
+//add(2)([3]); // should return undefined.
 /*
 *** 	EXERCISE DESCRIPTION	***
 Bonfire: Arguments Optional
